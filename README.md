@@ -10,7 +10,7 @@ npm install
 
 ### Add env details
 
-Add dburl and port in .env file
+Add DBURL and PORT in .env file
 
 ### Start the application
  
@@ -33,8 +33,8 @@ Add dburl and port in .env file
 2. Set body for a request. eg.
 ``` 
 {
-    "buttonType": "reset",
-    "log": "start button clicked"
+    "buttonType": "stop",
+    "log": "stop button clicked with duration 10min"
 }
 ```
 ### GET Logs by Ip (paginated)
