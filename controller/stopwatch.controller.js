@@ -3,7 +3,7 @@ import StopWatch from '../models/StopWatch.js';
 // To fetch logs based on IP
 export const readAllByIp = async (req, res) => {
   const { ip } = req;
-  const { page, perPage } = req.body;
+  const { page, perPage } = req.query;
 
   const logs = await StopWatch.paginate(
     { ip },
@@ -19,7 +19,6 @@ export const readAllByIp = async (req, res) => {
 export const create = async (req, res) => {
   const { buttonType, log } = req.body;
   const { ip } = req;
-  console.log(ip);
 
   const oneLog = await StopWatch.create({ buttonType, log, ip });
   return res.status(200).json({ log: oneLog });
